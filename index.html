@@ -1,85 +1,146 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliseo Montenegro Rivera</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#about">Acerca de mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#certifications">Certificaciones</a></li>
-            <li><a href="#github-stats">GitHub Stats</a></li>
-        </ul>
-    </nav>
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-    <div class="container" id="inicio">
-        <div class="image-container">
-            <img alt="Oh Hi There" src="./FOTOS/Imagen de WhatsApp 2025-04-06 a las 4.01.01 AM.jpeg" width="300"/>
-        </div>
+/* Fondo y diseño general */
+body {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb, #00d2ff); /* Colores combinados vibrantes */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Ajuste para que el contenido se alinee correctamente */
+    color: white;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    padding: 0 20px; /* Agrega algo de margen */
+}
 
-        <h1 align="center">Hi <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">, I'm Eliseo Montenegro Rivera</h1>
-        
-        <!-- Foto personal debajo del título -->
-        <div class="personal-photo">
-            <img src="./assets/mi-foto.jpg" alt="Eliseo Montenegro Rivera" width="200" style="border-radius: 50%;"/>
-        </div>
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-        <div class="badges">
-            <img src="https://img.shields.io/github/followers/AnushkaWijegoonawardana97?style=social">
-            <img src="https://img.shields.io/github/stars/AnushkaWijegoonawardana97?style=social">
-            <img src="https://visitor-badge.laobi.icu/badge?page_id=AnushkaWijegoonawardana97.repoName">
-            <img src="https://komarev.com/ghpvc/?username=AnushkaWijegoonawardana97" alt="AnushkaWijegoonawardana97">
-        </div>
+/* Contenedor central */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px; /* Se agrega margen superior para no cubrir el contenido con la barra */
+    animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
+}
 
-        <section id="about">
-            <h2>ACERCA DE MI :</h2>
-            <p>Soy estudiante de Ingeniería de Sistemas e Informática en la Universidad Continental, apasionado por la tecnología. Mi interés se centra en el diseño de software, el desarrollo de aplicaciones móviles y la creación de páginas web, buscando siempre fusionar funcionalidad e innovación en cada proyecto.</p>
-            <ul>
-                <li>💻 Me encanta diseñar y desarrollar software que ofrezca soluciones eficientes.</li>
-                <li>📱 Apasionado por el desarrollo de aplicaciones móviles con experiencias intuitivas.</li>
-                <li>🌐 Interesado en la creación de páginas web atractivas y funcionales.</li>
-            </ul>
-        </section>
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-        <section id="skills">
-            <h2>What I am Good at 🧑‍💻 :</h2>
-            <div class="skills-icons">
-                <img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
-                <img src="https://img.icons8.com/color/48/000000/css3.png"/>
-                <img src="https://img.icons8.com/color/48/000000/sass.png"/>
-                <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
-                <img src="https://img.icons8.com/office/48/000000/react.png"/>
-                <img src="https://img.icons8.com/color/48/000000/nextjs.png"/>
-            </div>
-        </section>
+/* Estilo del encabezado (nombre grande) */
+h1 {
+    font-size: 10vw; /* Ajusta el tamaño en relación al ancho de la ventana */
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+    animation: zoomInText 3s ease-out; /* Efecto de zoom en el texto */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para hacer que el texto resalte */
+    text-transform: uppercase; /* Poner en mayúsculas */
+}
 
-        <section id="certifications">
-            <h2>Certifications! 🏆</h2>
-            <!-- Add certification badges here -->
-        </section>
+/* Animación de zoom en el texto */
+@keyframes zoomInText {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
 
-        <section id="github-stats">
-            <h2>GitHub Stats! 📊</h2>
-            <div class="github-stats">
-                <a href="https://github.com/Aryagm/github-readme-stats">
-                    <img src="https://github-readme-stats.vercel.app/api?username=Aryagm&show_icons=true&theme=merko">
-                </a>
-                <a href="https://github.com/Aryagm/github-readme-stats">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aryagm&layout=compact&theme=merko">
-                </a>
-            </div>
-        </section>
+/* Estilo de la imagen (foto personal) */
+.personal-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+    animation: scaleUp 2s ease-in-out;
+}
 
-        <footer>
-            <p>Connect with me on:</p>
-            <a href="https://www.linkedin.com/in/eliseo-montenegro-rivera?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)">
-                <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white">
-            </a>
-        </footer>
-    </div>
+/* Animación de scaleUp */
+@keyframes scaleUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Sección de habilidades */
+#skills img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+#skills img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo de los enlaces (links) */
+footer a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Estilos para los encabezados */
+h2 {
+    color: white;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Barra de navegación fija en la parte superior */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff0072; /* Color de fondo al pasar el cursor */
+}
