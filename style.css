@@ -1,197 +1,49 @@
-/* Reset de estilos básicos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Fondo y diseño general */
-body {
-    background: linear-gradient(45deg, #4e54c8, #8f94fb, #00d2ff); /* Colores combinados vibrantes */
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
-    height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* Centra todo el contenido verticalmente */
-    color: white;
-    overflow-y: auto; /* Permite desplazamiento vertical */
-    padding: 0 20px; /* Agrega algo de margen */
-    flex-direction: column;
-}
-
-/* Animación del fondo */
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Contenedor central */
-.container {
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in-out;
-    overflow: hidden;
-}
-
-/* Estilo del formulario de login */
-#login-form {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Agregar sombra para destacar el formulario */
-}
-
-/* Animación de fadeIn */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Estilos del encabezado (nombre grande) */
-h1 {
-    font-size: 10vw; /* Ajusta el tamaño en relación al ancho de la ventana */
-    font-weight: bold;
-    color: white;
-    margin-top: 50px;
-    animation: zoomInText 3s ease-out; /* Efecto de zoom en el texto */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para hacer que el texto resalte */
-    text-transform: uppercase; /* Poner en mayúsculas */
-}
-
-/* Animación de zoom en el texto */
-@keyframes zoomInText {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-/* Estilo de los enlaces (links) */
-footer a {
-    text-decoration: none;
-    margin: 10px;
-}
-
-/* Estilos del pie de página */
-footer {
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Barra de navegación fija en la parte superior */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+/* Estilos para el formulario de login */
+.login-container {
+    display: none; /* Ocultamos el formulario inicialmente */
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px 0;
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #ff0072; /* Color de fondo al pasar el cursor */
-}
-
-/* Estilo del pie de página */
-footer {
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Sección de habilidades */
-#skills img {
-    margin: 10px;
-    transition: transform 0.3s ease;
-}
-
-#skills img:hover {
-    transform: scale(1.2);
-}
-
-/* Estilos para los encabezados */
-h2 {
-    color: white;
-    margin: 20px 0;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos del formulario de login */
-#login-form {
-    text-align: center;
-    padding: 20px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
+    color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Formulario de login: título y campos de entrada */
-#login-form h2 {
-    color: white;
-    margin-bottom: 20px;
+.login-container form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
 }
 
-#login-form input {
+.login-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: none;
 }
 
-#login-form button {
-    padding: 10px 20px;
-    background-color: #ff0072;
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e54c8;
     border: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
+
+.login-container button:hover {
+    background-color: #8f94fb;
+}
+
 
 #login-form button:hover {
     background-color: #d1005f;
