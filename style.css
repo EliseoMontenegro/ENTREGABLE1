@@ -43,7 +43,7 @@
 
 /* Fondo y diseño general */
 body {
-    background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff0072);
+    background: linear-gradient(45deg, #4e54c8, #8f94fb, #00d2ff); /* Colores combinados vibrantes */
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     height: 100vh;
@@ -151,4 +151,3 @@ footer p {
     font-size: 1.2rem;
     margin: 10px 0;
 }
-
