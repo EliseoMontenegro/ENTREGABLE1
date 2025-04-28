@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -41,5 +41,114 @@
     background-color: #ff0072; /* Color de fondo al pasar el cursor */
 }
 
-/* Resto de los estilos... */
+/* Fondo y diseño general */
+body {
+    background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff0072);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor central */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 80px auto; /* Se agrega margen superior para no cubrir el contenido con la barra */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Estilos para las imágenes */
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    animation: zoomIn 3s ease-in-out;
+}
+
+.personal-photo img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+    animation: scaleUp 2s ease-in-out;
+}
+
+/* Animación de zoomIn */
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animación de scaleUp */
+@keyframes scaleUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Sección de habilidades */
+#skills img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+#skills img:hover {
+    transform: scale(1.2);
+}
+
+/* Sección de certificaciones */
+#certifications a {
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+#certifications a:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo de los enlaces (links) */
+footer a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Estilos para los encabezados */
+h1, h2 {
+    color: white;
+    margin: 20px 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
 
