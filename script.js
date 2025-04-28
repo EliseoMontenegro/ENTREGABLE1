@@ -1,6 +1,5 @@
-// You can add custom scripts here for additional animations or interactions
 document.addEventListener("DOMContentLoaded", function() {
-    // Example animation effect on the badges section
+    // Ejemplo de animación en la sección de los badges
     const badges = document.querySelector('.badges');
     badges.style.opacity = 0;
     badges.style.transition = 'opacity 2s';
