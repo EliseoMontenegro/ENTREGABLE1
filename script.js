@@ -23,13 +23,3 @@ function validarLogin(event) {
         alert("Usuario o contraseña incorrectos.");
     }
 }
-
-// Función para cerrar sesión
-// Función para cerrar sesión
-function cerrarSesion() {
-    document.getElementById('contenido').style.display = 'none'; // Oculta el contenido protegido
-    document.getElementById('login-form').style.display = 'block'; // Muestra el formulario de login
-    document.getElementById('usuario').value = ''; // Limpia los campos de login
-    document.getElementById('clave').value = '';
-}
-
