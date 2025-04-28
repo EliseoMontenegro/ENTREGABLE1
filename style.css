@@ -180,17 +180,26 @@ footer p {
     border-radius: 5px;
     cursor: pointer;
 }
-/* Cerrar sesión */
-#logout-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff0072;
-    border: none;
+/* Estilo para el enlace de Cerrar sesión */
+.navbar a {
+    text-decoration: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 15px;
     border-radius: 5px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.navbar a:hover {
+    background-color: #ff0072; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo específico para el enlace de Cerrar sesión */
+.navbar li a {
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+}
+
 
 #logout-button:hover {
     background-color: #d1005f;
