@@ -1,49 +1,183 @@
-/* Estilos para el formulario de login */
-.login-container {
-    display: none; /* Ocultamos el formulario inicialmente */
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y diseño general */
+body {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb, #00d2ff); /* Colores combinados vibrantes */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Ajuste para que el contenido se alinee correctamente */
+    color: white;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    padding: 0 20px; /* Agrega algo de margen */
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor central */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px; /* Se agrega margen superior para no cubrir el contenido con la barra */
+    animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Estilo del encabezado (nombre grande) */
+h1 {
+    font-size: 10vw; /* Ajusta el tamaño en relación al ancho de la ventana */
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+    animation: zoomInText 3s ease-out; /* Efecto de zoom en el texto */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para hacer que el texto resalte */
+    text-transform: uppercase; /* Poner en mayúsculas */
+}
+
+/* Animación de zoom en el texto */
+@keyframes zoomInText {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Estilo de la imagen (foto personal) */
+.personal-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+    animation: scaleUp 2s ease-in-out;
+}
+
+/* Animación de scaleUp */
+@keyframes scaleUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Sección de habilidades */
+#skills img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+#skills img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo de los enlaces (links) */
+footer a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Estilos para los encabezados */
+h2 {
+    color: white;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Barra de navegación fija en la parte superior */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.navbar ul {
+    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-container form {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
+.navbar li {
+    margin: 0 15px;
 }
 
-.login-container input {
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff0072; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilos del formulario de login */
+#login-form {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#login-form h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#login-form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
 }
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4e54c8;
+#login-form button {
+    padding: 10px 20px;
+    background-color: #ff0072;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
     cursor: pointer;
 }
-
-.login-container button:hover {
-    background-color: #8f94fb;
-}
-
 
 #login-form button:hover {
     background-color: #d1005f;
