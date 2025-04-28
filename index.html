@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliseo Montenegro Rivera</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#about">Acerca de mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#certifications">Certificaciones</a></li>
-            <li><a href="#github-stats">GitHub Stats</a></li>
-        </ul>
-    </nav>
-
-    <div class="container" id="inicio">
-        <!-- Formulario de Login -->
-        <div id="login-form">
-            <h2>Login</h2>
-            <form id="login" onsubmit="return validarLogin(event)">
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required>
-
-                <label for="clave">Clave:</label>
-                <input type="password" id="clave" name="clave" required>
-
-                <button type="submit">Ingresar</button>
+    <div class="container">
+        <!-- Formulario de login -->
+        <div id="login-form" class="form-container">
+            <h2>Iniciar sesión</h2>
+            <form onsubmit="return login(event)">
+                <input type="text" id="username" placeholder="Usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
             </form>
         </div>
+
+        <!-- Sección cuando el usuario ya ha iniciado sesión -->
+        <div id="logged-in-section" class="form-container" style="display: none;">
+            <h2>Bienvenido, <span id="user-name"></span>!</h2>
+            <button onclick="logout()">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tu empresa | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
 
         <!-- Contenido protegido -->
         <div id="contenido" style="display:none;">
