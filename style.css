@@ -1,66 +1,123 @@
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Fondo y diseño general */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff0072);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
 }
 
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor central */
 .container {
-    width: 90%;
-    margin: 0 auto;
     text-align: center;
-}
-
-.image-container {
-    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-top: 20px;
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
+/* Estilos para las imágenes */
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    animation: zoomIn 3s ease-in-out;
+}
+
+.personal-photo img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+    animation: scaleUp 2s ease-in-out;
+}
+
+/* Animación de zoomIn */
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animación de scaleUp */
+@keyframes scaleUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Estilos de los badges (escudos) */
 .badges img {
     margin: 10px;
 }
 
-#about, #skills, #certifications, #github-stats {
-    margin-top: 40px;
-}
-
-.skills-icons img {
+/* Sección de habilidades */
+#skills img {
     margin: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.skills-icons img:hover {
+#skills img:hover {
     transform: scale(1.2);
 }
 
-footer {
-    margin-top: 40px;
+/* Sección de certificaciones */
+#certifications a {
+    margin: 5px;
+    transition: transform 0.3s ease;
 }
 
-footer p {
-    font-size: 1.2rem;
+#certifications a:hover {
+    transform: scale(1.1);
 }
 
+/* Estilo de los enlaces (links) */
 footer a {
     text-decoration: none;
     margin: 10px;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Estilos para los encabezados */
+h1, h2 {
+    color: white;
+    margin: 20px 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
