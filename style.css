@@ -48,6 +48,7 @@ body {
     animation: zoomIn 3s ease-in-out;
 }
 
+/* Imagen personal redondeada y tamaño adecuado */
 .personal-photo img {
     border-radius: 50%;
     width: 200px;
@@ -67,6 +68,13 @@ body {
 @keyframes scaleUp {
     0% { transform: scale(0.5); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
+}
+
+/* Estilos para el nombre en h1 (más grande que los demás encabezados) */
+h1 {
+    font-size: 3rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    margin: 20px 0;
 }
 
 /* Estilos de los badges (escudos) */
@@ -100,16 +108,11 @@ footer a {
     margin: 10px;
 }
 
-/* Estilos para los encabezados */
-h1, h2 {
+/* Estilos para los encabezados h2 */
+h2 {
     color: white;
     margin: 20px 0;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Aumentamos un poco el tamaño */
 }
 
 /* Estilo del pie de página */
@@ -120,4 +123,23 @@ footer {
 footer p {
     font-size: 1.2rem;
     margin: 10px 0;
+}
+
+/* Asegurar que la sección de "Acerca de mí" se vea completa */
+#about {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+}
+
+/* Ajuste de imágenes insertadas en carpetas */
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
