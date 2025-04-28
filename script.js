@@ -1,45 +1,25 @@
-// Verificar si el usuario ya está logueado
-document.addEventListener('DOMContentLoaded', () => {
-    const user = localStorage.getItem('username');
-    if (user) {
-        // Si el usuario está logueado, mostrar la sección de usuario logueado
-        showLoggedInSection(user);
-    } else {
-        // Si no está logueado, mostrar el formulario de login
-        document.getElementById('login-form').style.display = 'block';
-        document.getElementById('logged-in-section').style.display = 'none';
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    // Ejemplo de animación en la sección de los badges
+    const badges = document.querySelector('.badges');
+    badges.style.opacity = 0;
+    badges.style.transition = 'opacity 2s';
+    setTimeout(() => {
+        badges.style.opacity = 1;
+    }, 500);
 });
 
-// Función para manejar el inicio de sesión
-function login(event) {
-    event.preventDefault();
+// Función para validar el login
+function validarLogin(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de manera convencional
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const usuario = document.getElementById('usuario').value;
+    const clave = document.getElementById('clave').value;
 
-    // Lógica simple de validación (puedes mejorarla)
-    if (username && password) {
-        // Guardar el nombre de usuario en localStorage
-        localStorage.setItem('username', username);
-        showLoggedInSection(username);
+    if ((usuario === "71397305" && clave === "12345") || 
+        (usuario === "USER713973051" && clave === "12345")) {
+        document.getElementById('login-form').style.display = 'none'; // Oculta el formulario de login
+        document.getElementById('contenido').style.display = 'block'; // Muestra el contenido protegido
     } else {
-        alert('Por favor ingresa usuario y contraseña');
+        alert("Usuario o contraseña incorrectos.");
     }
-}
-
-// Función para mostrar la sección de usuario logueado
-function showLoggedInSection(username) {
-    document.getElementById('login-form').style.display = 'none';
-    document.getElementById('logged-in-section').style.display = 'block';
-    document.getElementById('user-name').innerText = username;
-}
-
-// Función para manejar el cierre de sesión
-function logout() {
-    // Eliminar el nombre de usuario del localStorage
-    localStorage.removeItem('username');
-    // Mostrar el formulario de login nuevamente
-    document.getElementById('login-form').style.display = 'block';
-    document.getElementById('logged-in-section').style.display = 'none';
 }
