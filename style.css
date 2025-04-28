@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-container {
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.badges img {
+    margin: 10px;
+}
+
+#about, #skills, #certifications, #github-stats {
+    margin-top: 40px;
+}
+
+.skills-icons img {
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
